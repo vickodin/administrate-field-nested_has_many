@@ -1,6 +1,6 @@
 <div class="nested-fields">
   <% field.nested_fields_for_builder(f).each do |attribute| -%>
-    <div class="field-unit field-unit--<%= attribute.html_class %>">
+    <div class="field-unit field-unit--<%= attribute.html_class %> field-unit--<%= requireness(attribute) %>">
       <%= render_field attribute, f: f %>
     </div>
   <% end -%>
